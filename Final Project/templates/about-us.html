@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}About Us{% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<head>
+    <div class="container-fluid">
+        <title>About Us</title>
+    </div>
+
+        <!-- Bootstrap Breadcrumbs -->
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">About</li>
+            </ol>
+          </nav>
+</head>
+<body>
+    <h2>About Us</h2>
+    <center><p>We have several years of IT experience and we can help launch this project for your company at an affordable price.</p></center>
+    <div class="company-logo" align="middle">
+        <img src="/static/images/skystats-logo.jpg">
+    </div>
+</body>
+</html>
+
+{% endblock %}

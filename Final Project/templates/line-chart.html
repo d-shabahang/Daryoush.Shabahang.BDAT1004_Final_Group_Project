@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Line Chart{% endblock %}
+{% block content %}
+
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.bundle.js"></script>
+
+  <div class="container-fluid">
+    <title>Line Chart</title>
+  </div>
+
+  <!-- Bootstrap Breadcrumbs -->
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Line Chart</li>
+    </ol>
+  </nav>
+	
+</head>
+<body>
+	<div class="chart-container" style="position: relative; height:30vh; width:60vw">
+		<canvas id="myChart"></canvas>
+	</div>
+
+    <script>
+      var ctx = document.getElementById('myChart');
+      var myChart = new Chart(ctx, {
+          type: 'line',
+		  
+          data: {
+            labels: {{ labels | safe }},
+            datasets: [{ 
+                label: "Change rate of US Dollar for each month.",
+                data: {{ values | safe }},
+                borderColor: "#3e95cd",
+                backgroundColor: "#7bb6dd",
+                fill: false,
+              }
+            ]
+			
+          }
+			
+		}
+        );
+		
+    </script>
+  
+  </body>
+</html>
+
+{% endblock %}

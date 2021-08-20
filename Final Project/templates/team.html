@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Team Members{% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<head>
+    <div class="container-fluid">
+        <title>Team Members</title>
+    </div>
+
+        <!-- Bootstrap Breadcrumbs -->
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Team</li>
+            </ol>
+          </nav>
+</head>
+<body>
+    <h2>Team Members</h2>
+    
+    <img src="/static/images/daryoush.png" width="200" height="200">
+    <strong><li>Daryoush Shabahang - Developer / Project Manager</li></strong>
+    <br>
+    <p>I have completed my bachelor’s in Communications with a minor in Digital Media, as well as
+        worked at several unique companies and industries throughout the years, including ecommerce and telecommunications.</p>
+
+    <img src="/static/images/dhruval.png" width="200" height="200">
+    <strong><li>Dhruval Domadiya - Developer (charts)</li></strong>
+    <br>
+    <p>I have completed my bachelor's in computer engineering in 2020. I worked as an administrator at a private school
+        for one year. I am more interested in management & analytics and want to start my career in the field of sales and
+        marketing as an assistant manager.</p>
+
+    <img src="/static/images/jay.png" width="200" height="200">
+    <strong><li>Jay Gajjar - Developer (charts)</li></strong>
+    <br>
+    <p>I have graduated in Computer Engineering and worked in a data warehousing company called Saama Technology. I processed
+        Genentech provided data for Healthcare Profession and Healthcare Organization submit it to the Centers for Medicare
+        & Medicaid Services (CMS).</p>
+</body>
+</html>
+
+{% endblock %}
